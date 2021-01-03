@@ -1,4 +1,4 @@
-// USE EFFECT EXAMPLE TWO
+// USE EFFECT EXAMPLE TWO with event listeners
 
 import React, { useEffect, useState } from 'react';
 
@@ -16,7 +16,7 @@ export default function AppTwo () {
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [windowWidth])
 
 
 

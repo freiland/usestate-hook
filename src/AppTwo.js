@@ -1,4 +1,4 @@
-// USE EFFFECT
+// USE EFFFECT - perform some side effect when an event occurs
 
 import React, { useEffect, useState } from 'react';
 

@@ -4,14 +4,16 @@ import App from './App';
 import AppTwo from './AppTwo';
 import AppThree from './AppThree';
 import AppFour from './AppFour';
+import UseReducer from './UseReducer';
+
 
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppFour />
+    <UseReducer />
+    {/* <AppFour /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
