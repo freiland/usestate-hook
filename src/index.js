@@ -5,6 +5,7 @@ import AppTwo from './AppTwo';
 import AppThree from './AppThree';
 import AppFour from './AppFour';
 import UseReducer from './UseReducer';
+import AppSeven from './AppSeven';
 
 
 
@@ -12,7 +13,7 @@ import UseReducer from './UseReducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UseReducer />
+    <AppSeven />
     {/* <AppFour /> */}
   </React.StrictMode>,
   document.getElementById('root')
