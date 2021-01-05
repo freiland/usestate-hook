@@ -13,13 +13,19 @@ function reducer (todos, action) {
   switch(action.type) {
     case ACTIONS.ADD_TODO:
       return [...todos, newTodo(action.payload.name)]
-    case ACTIONS.TOGGLE_TODO:
+    case ACTIONS.TOGGLE_TODO: 
+      return todos.map(todo => {
+        if (todo.id === action.payload.id) {
+          return {...todo, complete: !todo.complete }
+        } 
+        return todo
+      })
 
   } 
 }
 
 function newTodo (name) {
-  return { id: Date.now(), name: name, complete: false}
+  return { id: Date.now(), name: name, complete: false }
 }
 
 function AppSeven () {
@@ -43,7 +49,7 @@ function AppSeven () {
         <input type='text' value = {name} onChange={e => setName(e.target.value)} />
       </form>
       {todos.map(todo => {
-        return <Todo key={todo.id} todo={todo.name} />
+        return <Todo key={todo.id} todo={todo.name} dispatch={dispatch}/>
 
 
 
